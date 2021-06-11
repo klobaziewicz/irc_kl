@@ -1,0 +1,31 @@
+body, html {
+  height: 100vh;
+}
+
+body {
+  font-family: 'Montserrat';
+  margin: 0;
+  background: #383838;
+  color: white;
+}
+
+.t {
+  color: red;
+  display: inline;
+}
+
+#main {
+  width: 300px;
+  height: 300px;
+  border: 1px #b5b5b5 solid;
+}
+
+img {
+  height: 20px;
+  width: 20px;
+}
+
+.kol {
+  display: none;
+}
+/*# sourceMappingURL=main.css.map */

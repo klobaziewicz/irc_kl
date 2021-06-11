@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="main.css">
+<script src="browser.js"></script>
+<script src="perfect-scrollbar-1.4.0/dist/perfect-scrollbar.js"></script>
+<link rel="stylesheet" href="perfect-scrollbar-1.4.0/css/perfect-scrollbar.css">
+</head>
+<body onload="a()">
+<script>
+function a(){
+  /*
+  import PerfectScrollbar from
+        'perfect-scrollbar';
+        */
+  const container =
+  document.querySelector('#main');
+  const ps = new
+        PerfectScrollbar(container, {
+        supperessScrollX: true
+        //wheelSpeed: 2,
+        //wheelPropagation: true,
+        //minScrollbarLength: 20
+        });
+
+
+  console.log('s')
+  document.querySelector(".sec").style.display="none"
+}
+
+  var nick1=""
+  function nick(){
+    nick1=document.querySelector(".txt").value;
+    console.log(nick1)
+    document.querySelector(".first").style.display="none"
+    document.querySelector(".sec").style.display="inline"
+    let kolory=['green','red','blue','yellow','white']
+    let rand=Math.floor(Math.random() * 5) + 0
+    let col=kolory[rand]
+    document.querySelector('.kol').innerText=col
+  }
+</script>
+wpisz nick:
+<div class="first">
+  <input type="text" class="txt">
+  <input type="submit" onclick="nick()">
+</div>
+
+<div class="sec">
+  <form name="frm">
+    <input type="text" name="message" />
+    <input type="submit" value="Send" />
+  </form>
+  <div class="kol"></div>
+  <div id="main">
+  </div>
+</div>
+
+<script>
+  new PublishForm(document.forms.frm, 'frm');
+  new SubscribePane(document.getElementById('main'), 'main?random=' + Math.random());
+</script>
+<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+
+</body>
+</html>
